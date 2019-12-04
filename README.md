@@ -4,12 +4,12 @@ Modeling signal filtering in the synapse between Mossy Fibers and Unipolar Brush
 ---
 
 The cerebellum is a brain area involved in the representation of movement and position. This high-level representation seems to be achieved through the integration and the disambiguation of sensory signals. This idea motivates to investigate the determinants of the signal processing, that might lie at the level of the neurons.  
-![Signal processing from sensory inputs to the cerebellum](https://github.com/esther-poniatowski/PCBS-UBC_synapse/blob/master/1.PNG)
+![Signal processing : from sensory inputs to the cerebellum](https://github.com/esther-poniatowski/PCBS-UBC_synapse/blob/master/fig1_cerebellum.PNG)
 
 In the cerebellum, the signal flows through a feedforward circuit :  
 (1) It receives direct sensory inputs from the vestibular system of the inner ears, conveyed by the mossy fibers (MF). This signal is produced by sensors of inertial translational and rotational acceleration.  
 (2) In the cerebellum, the mossy fibers contact the Unipolar Brush Cells (UBCs).  
-![Feedforward netword in the cerebellum](https://github.com/esther-poniatowski/PCBS-UBC_synapse/blob/master/1.PNG)
+![Feedforward netword in the cerebellum](https://github.com/esther-poniatowski/PCBS-UBC_synapse/blob/master/fig2_network.PNG)
 
 The cerebellum features a high density of these remarkable interneurons, which display a very particular type of synapses. Indeed, the many convolutions of their synaptic clefts lead to a giant contact surfaces, riddled with neurotransmitter release sites.  
 This observation triggers the hypothesis that the synapse MF-UBC could play a role in the signal transformation, potentially by acting like a filter.  

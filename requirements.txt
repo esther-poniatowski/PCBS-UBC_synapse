@@ -1,0 +1,14 @@
+# ========================
+# DEPENDENCIES
+# Automatic installation:
+# pip install -r requirements.txt
+# ========================
+
+numpy
+matplotlb
+pandas
+os
+ctypes
+subprocess
+pickle
+warnings

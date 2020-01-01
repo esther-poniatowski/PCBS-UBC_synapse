@@ -1,0 +1,6 @@
+include *.md
+recursive-include UBC_synapse *.c
+recursive-include UBC_synapse *.so
+recursive-include UBC_data *.pickle
+recursive-include UBC_data *.txt
+recursive-include UBC_data *.csv

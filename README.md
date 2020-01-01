@@ -15,6 +15,12 @@ The cerebellum features a high density of these remarkable interneurons, which d
 This observation triggers the hypothesis that the synapse MF-UBC could play a role in the signal transformation, potentially by acting like a *filter*.  
 **The goal of the project is to explore the influence of the synapse's morphological and physiological properties on the signal transformation.**
 
+### Usage
+---
+
+Please use the Jupyter notebook provided.
+The dependencies can be installed either via conda or virtualenv, thanks to the files environment.yml or requirements.txt.
+
 ### Progammation objectives
 ---
 

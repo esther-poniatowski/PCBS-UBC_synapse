@@ -1,1 +1,0 @@
-gcc -shared -Wl,-soname,run_simulation -o run_simulation.so -fPIC run_simulation.c

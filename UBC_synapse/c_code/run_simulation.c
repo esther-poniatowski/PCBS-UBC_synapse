@@ -1,5 +1,6 @@
 #include <math.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 // UBC cleft glutamate diffusion model coupled to AMPA kinetic model (Raman and Trussell) //                                                                //
@@ -21,27 +22,27 @@ double sum(double v[], int n)
 }
 
 
-void sim(int *ig,           // identity matrix for intraglomerular space (1 in glomerulus, 0 outside)
-             int *sy,         // identity matrix for synaptic spaces (0s and 1s)
-             int nr,      // number of rows in c1 and c2
-             int nc,      // number of column in c1 and c2
-             int nit,        // number of iterations, i.e. length(spat)
-             int *spat,       // synaptic release pattern (0s and 1s)
-             double tstep,   // time step of stimulation in seconds
-             double q,   // quantum of glutamate released at each synaptic site (in mM)
-             double qi,     // equivalent of coefficient of diffusion inside glomerular space
-             double qo,    // equivalent of coefficient of diffusion at boundary with extraglomerular space
-             int *coords,      // coordinates of points of interest for continuous mesures
-             int n,      // number of points of interest for continuous mesures
-             double n_AMPA,  // number of AMPA channels per pixel
-             double e_AMPA,  // inversion potential of AMPA channel
-             double g_AMPA,  // conductance of AMPA channel
-             double rm,       // membrane resistance
-             double cm,       // membrane capacitance
-             double v0,      // membrane resting potential
-             double *resglu,  // variable to store the results of concentrations to the interet points
-             double *resAMPAtot,  // variable to store the results of the overall open probability at all pixels
-             double *resV     // vector to store the membrane potential variations in time
+void sim(bool *ig,           // identity matrix for intraglomerular space (1 in glomerulus, 0 outside)
+         bool *sy,         // identity matrix for synaptic spaces (0s and 1s)
+         int nr,      // number of rows in c1 and c2
+         int nc,      // number of column in c1 and c2
+         int nit,        // number of iterations, i.e. length(spat)
+         bool *spat,       // synaptic release pattern (0s and 1s)
+         double tstep,   // time step of stimulation in seconds
+         double q,   // quantum of glutamate released at each synaptic site (in mM)
+         double qi,     // equivalent of coefficient of diffusion inside glomerular space
+         double qo,    // equivalent of coefficient of diffusion at boundary with extraglomerular space
+         int *coords,      // coordinates of points of interest for continuous mesures
+         int n,      // number of points of interest for continuous mesures
+         double n_AMPA,  // number of AMPA channels per pixel
+         double e_AMPA,  // inversion potential of AMPA channel
+         double g_AMPA,  // conductance of AMPA channel
+         double rm,       // membrane resistance
+         double cm,       // membrane capacitance
+         double v0,      // membrane resting potential
+         double *resglu,  // variable to store the results of concentrations to the interet points
+         double *resAMPAtot,  // variable to store the results of the overall open probability at all pixels
+         double *resV     // vector to store the membrane potential variations in time
 )
 {
   ///////////////////////////////
@@ -219,7 +220,7 @@ void sim(int *ig,           // identity matrix for intraglomerular space (1 in g
     // Return sum of glutamate concentration values at set of points of interest - continuous measures
     for(i=0;i<n;i++){
       l=coords[i];
-      m=coords[i+n];
+      m=coords[i+1];
       resglu[k*n+i] = c[m*nr+l];
     }
   }

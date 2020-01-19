@@ -15,6 +15,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 from matplotlib.patches import Patch
+from types import FunctionType
+from inspect import getmembers
 
 
 def print_matrix(S, I, res, print_coords=False, coords=None):
@@ -103,3 +105,16 @@ def print_pattern(spat, tstep, nticks=5) :
     ax.legend(loc='upper left', bbox_to_anchor=(0, -0.1))
     plt.show()
 
+
+
+if __name__ == "__main__":
+    # Printing the documentation:
+    print("""This module is not designed to be executed in isolation in the shell. Please import UBC_synapse.
+        Below is displayed the documentation about this module. Press 'q' to escape.""")
+    print(__doc__)
+    # Retrieving functions defined in this script:
+    def is_local(object):
+        return isinstance(object, FunctionType) and object.__module__ == __name__
+    func_list = [value for name, value in getmembers(sys.modules[__name__], predicate=is_local)]
+    for func in func_list :
+        print(help(func))

@@ -1,0 +1,17 @@
+name: UBC_synapse
+
+channels:
+  - defaults
+
+dependencies:
+  - python>=3.6
+  - numpy
+  - matplotlb
+  - pandas
+  - os
+  - ctypes
+  - types
+  - inspect
+  - subprocess
+
+ 

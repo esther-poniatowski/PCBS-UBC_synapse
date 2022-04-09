@@ -25,7 +25,7 @@ Please use the Jupyter notebook provided. This demonstration is designed to guid
 The dependencies required for running the project are standard libraries from Python 3. They are nonetheless listed in several files in the folder `UBC_installation/` if necessary. They could be installed either via conda or virtualenv, thanks to the files environment.yml or requirements.txt.
 
 
-### Progammation objectives
+### Progamming goals
 ---
 
 This project was drawn from an original project conducted in 2018-2019 in the context of an biology L3 intership, under the direction of Guillaume Dugué. The focus was directed, as priority, on investigating hypotheses about the synapse functions. Therefore, the codes I produced were hardly readable, all the more since carrying on this project was an opportunity for me to learn and practice programmation.
